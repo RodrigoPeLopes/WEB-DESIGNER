@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link href="reset.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header_h">
+          <h2>Não encontrou o que procurava?</h2>
+          <p>Preencha o formulário e retornaremos o contato.</p>
+          <img src="logo.png" alt="Logo da empresa Midas Mais" height="400" />
+        </div>
+      </header>
+      <form name="formRegister" id="formRegister" method="post">
+        <fieldset class="form-group">
+          <label>Nome*</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Nome"
+            autocomplete="name"
+            class="form-control"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label>E-mail*</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+            autocomplete="email"
+            class="form-control"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Telefone*</label>
+          <input
+            type="tel"
+            name="Telephone"
+            id="Telephone"
+            placeholder="(00) 00000-0000"
+            class="form-control"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Data de Nascimento*</label>
+          <input
+            type="text"
+            name="dateOfBirth"
+            id="dateOfBirth"
+            placeholder="00/00/0000"
+            class="form-control"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Bairro de interesse*</label>
+          <select name="district" required>
+            <option value="1">Lagoa</option>
+            <option value="2">Leblon</option>
+            <option value="3">Ipanema</option>
+            <option value="3">Humaitá</option>
+            <option value="4">Urca</option>
+            <option value="5">Barra da Tijuca</option>
+            <option value="6">São Conrado</option>
+            <option value="7">Gávea</option>
+            <option value="8">Laranjeiras</option>
+            <option value="9">Flamengo</option>
+            <option value="10">Leme</option>
+            <option value="11">Maracanâ</option>
+            <option value="12">Copacabana</option>
+            <option value="13">Jardim Guanabara</option>
+            <option value="14">Botafogo</option>
+            <option value="15">Campo dos Afonsos</option>
+            <option value="16">Tijuca</option>
+            <option value="17">Grajaú</option>
+            <option value="18">Méier</option>
+            <option value="19">Moneró</option>
+            <option value="20">Cosme Velho</option>
+            <option value="21">Joá</option>
+            <option value="22">Todos os Santos</option>
+            <option value="23">Glória</option>
+            <option value="24">Andaraí</option>
+            <option value="25">Zumbi</option>
+            <option value="26">Praça da Bandeira6option></option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Qual horário prefere ser atendido?*</label>
+          <select required>
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Noite</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Autoriza contato por telefone*</label>
+          <input type="radio" name="accept" value="S" required /> Sim
+          <input type="radio" name="accept" value="N" required /> Não
+        </fieldset>
+        <fieldset class="button">
+          <button type="submit">Enviar</button>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
