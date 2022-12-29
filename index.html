@@ -12,9 +12,9 @@
     <div class="container">
       <header>
         <div class="header_h">
+          <img src="logoHorizontal.png" alt="Logo da empresa Midas Mais" />
           <h2>Não encontrou o que procurava?</h2>
           <p>Preencha o formulário e retornaremos o contato.</p>
-          <img src="logo.png" alt="Logo da empresa Midas Mais" height="400" />
         </div>
       </header>
       <form name="formRegister" id="formRegister" method="post">
@@ -46,17 +46,19 @@
           <label>Telefone*</label>
           <input
             type="tel"
-            name="Telephone"
-            id="Telephone"
+            name="telephone"
+            id="telephone"
             placeholder="(00) 00000-0000"
             class="form-control"
             required
+            maxlength="15"
+            onkeyup="handlePhone(event)"
           />
         </fieldset>
         <fieldset class="form-group">
           <label>Data de Nascimento*</label>
           <input
-            type="text"
+            type="date"
             name="dateOfBirth"
             id="dateOfBirth"
             placeholder="00/00/0000"
@@ -66,48 +68,122 @@
         </fieldset>
         <fieldset class="form-group">
           <label>Bairro de interesse*</label>
-          <select name="district" required>
-            <option value="1">Lagoa</option>
-            <option value="2">Leblon</option>
-            <option value="3">Ipanema</option>
-            <option value="3">Humaitá</option>
-            <option value="4">Urca</option>
-            <option value="5">Barra da Tijuca</option>
-            <option value="6">São Conrado</option>
-            <option value="7">Gávea</option>
-            <option value="8">Laranjeiras</option>
-            <option value="9">Flamengo</option>
-            <option value="10">Leme</option>
-            <option value="11">Maracanâ</option>
-            <option value="12">Copacabana</option>
-            <option value="13">Jardim Guanabara</option>
-            <option value="14">Botafogo</option>
-            <option value="15">Campo dos Afonsos</option>
-            <option value="16">Tijuca</option>
-            <option value="17">Grajaú</option>
-            <option value="18">Méier</option>
-            <option value="19">Moneró</option>
-            <option value="20">Cosme Velho</option>
-            <option value="21">Joá</option>
-            <option value="22">Todos os Santos</option>
-            <option value="23">Glória</option>
-            <option value="24">Andaraí</option>
-            <option value="25">Zumbi</option>
-            <option value="26">Praça da Bandeira6option></option>
+          <select name="district" class="form-control" required>
+            <option class="form-control" value="1">Lagoa</option>
+            <option class="form-control" value="2">Leblon</option>
+            <option class="form-control" value="3">Ipanema</option>
+            <option class="form-control" value="3">Humaitá</option>
+            <option class="form-control" value="4">Urca</option>
+            <option class="form-control" value="5">Barra da Tijuca</option>
+            <option class="form-control" value="6">São Conrado</option>
+            <option class="form-control" value="7">Gávea</option>
+            <option class="form-control" value="8">Laranjeiras</option>
+            <option class="form-control" value="9">Flamengo</option>
+            <option class="form-control" value="10">Leme</option>
+            <option class="form-control" value="11">Maracanâ</option>
+            <option class="form-control" value="12">Copacabana</option>
+            <option class="form-control" value="13">Jardim Guanabara</option>
+            <option class="form-control" value="14">Botafogo</option>
+            <option class="form-control" value="15">Campo dos Afonsos</option>
+            <option class="form-control" value="16">Tijuca</option>
+            <option class="form-control" value="17">Grajaú</option>
+            <option class="form-control" value="18">Méier</option>
+            <option class="form-control" value="19">Moneró</option>
+            <option class="form-control" value="20">Cosme Velho</option>
+            <option class="form-control" value="21">Joá</option>
+            <option class="form-control" value="22">Todos os Santos</option>
+            <option class="form-control" value="23">Glória</option>
+            <option class="form-control" value="24">Andaraí</option>
+            <option class="form-control" value="25">Zumbi</option>
+            <option class="form-control" value="26">Praça da Bandeira</option>
+            <option class="form-control" value="27">Zumbi</option>
+            <option class="form-control" value="28">Zumbi</option>
+            <option class="form-control" value="29">Zumbi</option>
+            <option class="form-control" value="30">Zumbi</option>
+            <option class="form-control" value="31">Zumbi</option>
+            <option class="form-control" value="32">Zumbi</option>
+            <option class="form-control" value="33">Zumbi</option>
+            <option class="form-control" value="34">Zumbi</option>
+            <option class="form-control" value="35">Zumbi</option>
+            <option class="form-control" value="36">Zumbi</option>
+            <option class="form-control" value="37">Zumbi</option>
+            <option class="form-control" value="38">Zumbi</option>
+            <option class="form-control" value="39">Zumbi</option>
+            <option class="form-control" value="40">Zumbi</option>
+            <option class="form-control" value="41">Zumbi</option>
+            <option class="form-control" value="42">Zumbi</option>
+            <option class="form-control" value="43">Zumbi</option>
+            <option class="form-control" value="44">Zumbi</option>
+            <option class="form-control" value="45">Zumbi</option>
+            <option class="form-control" value="46">Zumbi</option>
+            <option class="form-control" value="47">Zumbi</option>
+            <option class="form-control" value="48">Zumbi</option>
+            <option class="form-control" value="49">Zumbi</option>
+            <option class="form-control" value="50">Zumbi</option>
+            <option class="form-control" value="51">Zumbi</option>
+            <option class="form-control" value="52">Zumbi</option>
+            <option class="form-control" value="53">Zumbi</option>
+            <option class="form-control" value="54">Zumbi</option>
+            <option class="form-control" value="55">Zumbi</option>
+            <option class="form-control" value="56">Zumbi</option>
+            <option class="form-control" value="57">Zumbi</option>
+            <option class="form-control" value="58">Zumbi</option>
+            <option class="form-control" value="59">Zumbi</option>
+            <option class="form-control" value="60">Zumbi</option>
+            <option class="form-control" value="61">Zumbi</option>
+            <option class="form-control" value="62">Zumbi</option>
+            <option class="form-control" value="63">Zumbi</option>
+            <option class="form-control" value="64">Zumbi</option>
+            <option class="form-control" value="65">Zumbi</option>
+            <option class="form-control" value="66">Zumbi</option>
+            <option class="form-control" value="67">Zumbi</option>
+            <option class="form-control" value="68">Zumbi</option>
+            <option class="form-control" value="69">Zumbi</option>
+            <option class="form-control" value="70">Zumbi</option>
+            <option class="form-control" value="71">Zumbi</option>
+            <option class="form-control" value="72">Zumbi</option>
+            <option class="form-control" value="73">Zumbi</option>
+            <option class="form-control" value="74">Zumbi</option>
+            <option class="form-control" value="75">Zumbi</option>
+            <option class="form-control" value="76">Zumbi</option>
+            <option class="form-control" value="77">Zumbi</option>
+            <option class="form-control" value="78">Zumbi</option>
+            <option class="form-control" value="79">Zumbi</option>
+            <option class="form-control" value="80">Zumbi</option>
+            <option class="form-control" value="81">Zumbi</option>
+            <option class="form-control" value="82">Zumbi</option>
+            <option class="form-control" value="83">Zumbi</option>
+            <option class="form-control" value="84">Zumbi</option>
+            <option class="form-control" value="85">Zumbi</option>
+            <option class="form-control" value="86">Zumbi</option>
+            <option class="form-control" value="87">Zumbi</option>
+            <option class="form-control" value="88">Zumbi</option>
+            <option class="form-control" value="89">Zumbi</option>
+            <option class="form-control" value="90">Zumbi</option>
+            <option class="form-control" value="91">Zumbi</option>
+            <option class="form-control" value="92">Zumbi</option>
+            <option class="form-control" value="93">Zumbi</option>
+            <option class="form-control" value="94">Zumbi</option>
+            <option class="form-control" value="95">Zumbi</option>
+            <option class="form-control" value="96">Zumbi</option>
+            <option class="form-control" value="97">Zumbi</option>
+            <option class="form-control" value="98">Zumbi</option>
+            <option class="form-control" value="99">Zumbi</option>
+            <option class="form-control" value="100">Zumbi</option>
           </select>
         </fieldset>
         <fieldset class="form-group">
           <label>Qual horário prefere ser atendido?*</label>
-          <select required>
+          <select class="form-control" required>
             <option>Manhã</option>
             <option>Tarde</option>
             <option>Noite</option>
           </select>
         </fieldset>
-        <fieldset class="form-group">
+        <fieldset class="form-group-radio">
           <label>Autoriza contato por telefone*</label>
-          <input type="radio" name="accept" value="S" required /> Sim
-          <input type="radio" name="accept" value="N" required /> Não
+          <input type="radio" name="accept" id="radio" value="S" required /> Sim
+          <input type="radio" name="accept" id="radio" value="N" required /> Não
         </fieldset>
         <fieldset class="button">
           <button type="submit">Enviar</button>
@@ -115,4 +191,5 @@
       </form>
     </div>
   </body>
+  <script src="main.js"></script>
 </html>
